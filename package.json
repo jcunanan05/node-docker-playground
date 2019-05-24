@@ -1,0 +1,14 @@
+{
+  "name": "node-docker-playground",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Jonathan Cunanan",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
