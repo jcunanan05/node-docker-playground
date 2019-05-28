@@ -1,10 +1,23 @@
-version: '3'
+version: "3"
 
 services:
   node_dev_env:
     build: .
     container_name: node_docker
     ports:
-     - 3000:3000
-    volumes: 
-    - ./:/home/app
+      - "3000:3000"
+    volumes:
+      - ./:/home/app
+    networks:
+      - node-mongo-network
+
+  mongodb:
+    image: mongo
+    networks:
+      - node-mongo-network
+    ports:
+      - "27017:27017"
+
+networks:
+  node-mongo-network:
+    driver: bridge
