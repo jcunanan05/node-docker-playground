@@ -15,8 +15,6 @@ services:
     image: mongo
     networks:
       - node-mongo-network
-    ports:
-      - "27017:27017"
 
 networks:
   node-mongo-network:
